@@ -93,6 +93,8 @@ return array(
 	 * server_gmt_offset	in seconds the server offset from gmt timestamp when time() is used
 	 * default_timezone		optional, if you want to change the server's default timezone
 	 */
+        'default_timezone' => 'Asia/Tokyo',
+
 	// 'server_gmt_offset'  => 0,
 	// 'default_timezone'   => null,
 
