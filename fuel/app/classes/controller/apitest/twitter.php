@@ -57,12 +57,7 @@ class Controller_Apitest_Twitter extends Controller_Template
 		$json = json_decode(file_get_contents($url.$getfield, false, stream_context_create($options)));
 		
 		//検索結果の設定
-		$tweets = array();
-		foreach ($json->statuses as $tweet) {
-			$tweets[] = $tweet;
-		}
-
-		$data["tweets"] = $tweets;
+		$data["tweets"] = $json->statuses;
 
 		$data["subnav"] = array('result'=> 'active' );
 		$this->template->title = 'Apitest/twitter &raquo; Result';
