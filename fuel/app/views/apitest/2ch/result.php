@@ -6,8 +6,8 @@
 <p>Result</p>
 <?php foreach ($items as $item): ?>
                 <div>
-                        <?php echo Html::anchor($item->link, $item->title); ?><br><br>
-                        <?php echo $item->snippet ?><br>
+                        <?php echo Html::anchor($item['link'], $item['title']); ?><br><br>
+                        <?php echo $item['snippet'] ?><br>
                 </div>
         <hr>
 <?php endforeach; ?>

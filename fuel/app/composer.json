@@ -1,5 +1,6 @@
 {
     "require": {
-        "j7mbo/twitter-api-php": "dev-master"
+        "j7mbo/twitter-api-php": "dev-master",
+	 "sunra/php-simple-html-dom-parser": "dev-master"
     }
 }

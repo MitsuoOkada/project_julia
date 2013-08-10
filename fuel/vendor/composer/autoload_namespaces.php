@@ -6,7 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname(dirname($vendorDir));
 
 return array(
-    'Psr\\Log\\' => $vendorDir . '/psr/log',
-    'Monolog' => $vendorDir . '/monolog/monolog/src',
-    'FuelPHP\\Upload' => $vendorDir . '/fuelphp/upload/src',
+    'Sunra\\PhpSimple\\HtmlDomParser' => array($vendorDir . '/sunra/php-simple-html-dom-parser/Src'),
+    'Psr\\Log\\' => array($vendorDir . '/psr/log'),
+    'Monolog' => array($vendorDir . '/monolog/monolog/src'),
+    'FuelPHP\\Upload' => array($vendorDir . '/fuelphp/upload/src'),
 );
