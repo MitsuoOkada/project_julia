@@ -38,8 +38,6 @@ class ComposerAutoloaderInit8420476e26b8d104ff19eb61c374ed42
 
         $loader->register(true);
 
-        require $vendorDir . '/j7mbo/twitter-api-php/TwitterAPIExchange.php';
-
         return $loader;
     }
 }
