@@ -12,13 +12,14 @@ class Controller_Apitest_Google extends Controller_Template
 
 	public function action_result()
 	{
-		//取得したトークンをヘッダに付けてAPIアクセス
-                $url = 'https://www.googleapis.com/customsearch/v1';
-                $getfield = '?q='.urlencode(Input::post('query')).'&key=AIzaSyA4g6XLll8Uvep9WCrr3Gyqf5IIXuhWj3A&cx=008003594174819856019:jyycf2iomk4';
-                $json = json_decode(file_get_contents($url.$getfield));
+                $json = Util_Google::search(Input::post('query'));
+		$items = array();
+		if(isset($json->items)) {
+			$items = $json->items;
+		}
 
                 //検索結果の設定
-                $data["items"] = $json->items;
+                $data["items"] = $items;
 
 		$data["subnav"] = array('result'=> 'active' );
 		$this->template->title = 'Apitest/google &raquo; Result';
